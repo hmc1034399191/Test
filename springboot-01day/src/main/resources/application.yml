@@ -1,0 +1,21 @@
+server:
+  port: 8088
+
+#emp配置属性
+
+#emp:
+#  lastName: zhangsan
+#  age: 28
+#  salary: 20000
+#  boss: true
+#  birthday: 2020/02/02
+#  map:
+#    key1: one
+#    key2: two
+#  list:
+#    -list1
+#    -list2
+#  forte:
+#    name: 李四
+#    time: 8
+
