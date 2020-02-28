@@ -10,6 +10,7 @@
         <module name="springboot-02day" />
         <module name="springboot-03day" />
         <module name="springboot-04day" />
+        <module name="springboot-05day" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -17,6 +18,7 @@
       <module name="springboot-02day" target="1.8" />
       <module name="springboot-03day" target="1.8" />
       <module name="springboot-04day" target="1.8" />
+      <module name="springboot-05day" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
