@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table border="1px">
+        <tr>
+            <th>编号</th>
+            <th>姓名</th>
+            <th>总数</th>
+            <th>偶数/奇数</th>
+            <th>第一个元素</th>
+            <th>最后一个元素</th>
+        </tr>
+        <tr th:each="user, iterStat : ${list}">
+            <td th:text="${iterStat.count}">0</td>
+            <td th:text="${user.name}">mengxuegu</td>
+            <td th:text="${user.age == 1 ? '女' : '男'}">未知</td>
+            <td th:text="${iterStat.size}">0</td>
+            <td th:text="${iterStat.even}? '偶数' : '奇数'"></td>
+            <td th:text="${iterStat.first}"></td>
+            <td th:text="${iterStat.last}"></td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p th:text="${user}"></p>
+<div th:replace="fragmentPage :: header_User"></div>
+<div th:replace="fragmentPage :: #header_user2"></div>
+<h2 th:insert="fragmentPage :: #header_user2"></h2>
+</body>
+</html>
