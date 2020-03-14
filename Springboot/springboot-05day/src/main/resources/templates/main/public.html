@@ -11,8 +11,8 @@
     <header class="publicHeader" id="public_header">
         <h1>梦学谷账单管理系统</h1>
         <div class="publicHeaderR">
-            <p><span>下午好！</span><span style="color: #fff21b"> Admin</span> , 欢迎你！</p>
-            <a href="login.html">退出</a>
+            <p><span>下午好！</span><span style="color: #fff21b"> [[${session.msg}]]</span> , 欢迎你！</p>
+            <a th:href="@{/OutLogin}">退出</a>
         </div>
     </header>
 <!--时间-->
@@ -27,10 +27,10 @@
             <nav>
                 <ul class="list">
                     <li th:id="${activeUri=='bill' ? 'active' : ''}"><a href="../bill/list.html">账单管理</a></li>
-                    <li th:id="${activeUri=='provider' ? 'active' : ''}"><a href="../provider/list.html">供应商管理</a></li>
+                    <li th:id="${activeUri=='provider' ? 'active' : ''}"><a th:href="@{/providers}" href="../provider/list.html">供应商管理</a></li>
                     <li th:id="${activeUri=='user' ? 'active' : ''}"><a href="../user/list.html">用户管理</a></li>
                     <li th:id="${activeUri=='pwd' ? 'active' : ''}"><a href="../main/password.html">密码修改</a></li>
-                    <li><a href="../main/login.html">退出系统</a></li>
+                    <li><a th:href="@{/OutLogin}">退出系统</a></li>
                 </ul>
             </nav>
         </div>
