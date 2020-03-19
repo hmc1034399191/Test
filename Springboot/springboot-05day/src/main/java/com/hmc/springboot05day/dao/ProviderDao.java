@@ -5,10 +5,7 @@ import com.hmc.springboot05day.entities.Provider;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.StringUtils;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 @Repository
 public class ProviderDao {
@@ -18,7 +15,6 @@ public class ProviderDao {
 
     static {
         providerMap = new HashMap<Integer, Provider>();
-
         providerMap.put(2001, new Provider(2001, "PR-AA", "梦学谷供应商111", "小张", "18888666981", "深圳软件园", "0911-0123456", "品质A"));
         providerMap.put(2002, new Provider(2002, "PR-BB", "梦学谷供应商222", "小李", "18888666982", "深圳软件园", "0911-0123453", "品质B"));
         providerMap.put(2003, new Provider(2003, "PR-CC", "梦学谷供应商333", "小白", "18888666983", "深圳软件园", "0911-0123454", "品质C"));
@@ -32,6 +28,7 @@ public class ProviderDao {
         if(provider.getPid() == null){
             provider.setPid(initId++);
         }
+        provider.setCreateDate(new Date());
         providerMap.put(provider.getPid(), provider);
     }
 

@@ -1,6 +1,7 @@
 package com.hmc.springboot05day.dao;
 
 
+import com.hmc.springboot05day.entities.Provider;
 import com.hmc.springboot05day.entities.User;
 
 import org.springframework.stereotype.Repository;
@@ -37,21 +38,19 @@ public class UserDao {
         return userMap.values();
     }
 
-    public Collection<User> getAll(String username){
+    public Collection<User> getAll(String realName){
         Collection<User> users = getAll();
-
+        Collection<User>list=new ArrayList<>();
         //不为空
-        if( !StringUtils.isEmpty( username )) {
-            int count = 0;
+        if( !StringUtils.isEmpty( realName )) {
+
             for (User user: users) {
                 //包含则存在
-                if ( user.getUsername().toUpperCase().contains(  username.toUpperCase() ) ) {
-                    count++;
-                    //count>1 表示集合至少有一个存在的用户, 否则创建新的集合
-                    users = count > 1 ? users : new ArrayList<User>();
-                    users.add(user);
+                if ( user.getRealName().toUpperCase().contains(  realName.toUpperCase() ) ) {
+                    list.add(user);
                 }
             }
+            users=list;
         }
 
         return users;

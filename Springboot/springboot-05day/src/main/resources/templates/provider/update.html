@@ -1,10 +1,10 @@
 ﻿<!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head lang="en">
     <meta charset="UTF-8">
     <title>梦学谷账单管理系统</title>
-    <link rel="stylesheet" href="../css/public.css"/>
-    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" th:href="@{/css/public.css}" href="../css/public.css"/>
+    <link rel="stylesheet" th:href="@{/css/style.css}" href="../css/style.css"/>
 </head>
 <body>
 <!--头部-->
@@ -41,46 +41,53 @@
             <span>供应商管理页面 >> 供应商修改页</span>
         </div>
         <div class="providerAdd">
-            <form action="#">
+            <form id="updateFrom" th:action="@{/provider}" th:method="post">
                 <!--div的class 为error是验证错误，ok是验证成功-->
+                <input th:type="hidden" value="put" name="_method">
+                <input th:type="hidden" th:value="${provider.pid}" name="pid">
+                <div class="">
+                    <label for="providerCode">供应商名称：</label>
+                    <input type="text" name="providerCode" th:value="${provider.providerCode}" id="providerCode" placeholder="PR-AA"/>
+                    <span >*</span>
+                </div>
                 <div class="">
                     <label for="providerName">供应商名称：</label>
-                    <input type="text" name="providerName" id="providerName" placeholder="测试供应商001"/>
+                    <input type="text" name="providerName" th:value="${provider.providerName}" id="providerName" placeholder="测试供应商001"/>
                     <span >*</span>
                 </div>
                 <div>
                     <label for="people">联系人：</label>
-                    <input type="text" name="people" id="people" placeholder="韩露"/>
+                    <input type="text" name="people" th:value="${provider.people}" id="people" placeholder="韩露"/>
                     <span>*</span>
 
                 </div>
                 <div>
                     <label for="phone">联系电话：</label>
-                    <input type="text" name="phone" id="phone" placeholder="15918230478"/>
+                    <input type="text" name="phone"  th:value="${provider.phone}" id="phone" placeholder="15918230478"/>
                     <span></span>
                 </div>
                 <div>
                     <label for="address">联系地址：</label>
-                    <input type="text" name="address" id="address" placeholder="北京"/>
+                    <input type="text" name="address" th:value="${provider.address}" id="address" placeholder="北京"/>
                     <span></span>
 
                 </div>
                 <div>
                     <label for="fax">传真：</label>
-                    <input type="text" name="fax" id="fax" placeholder="15918230478"/>
+                    <input type="text" name="fax" th:value="${provider.fax}" id="fax" placeholder="15918230478"/>
                     <span></span>
 
                 </div>
                 <div>
                     <label for="describe">描述：</label>
-                    <input type="text" name="describe" id="describe" placeholder="描述"/>
+                    <input type="text" name="describe" th:value="${provider.describe}" id="describe" placeholder="描述"/>
                     <span></span>
 
                 </div>
                 <div class="providerAddBtn">
                     <!--<a href="#">保存</a>-->
                     <!--<a href="providerList.html">返回</a>-->
-                    <input type="button" value="保存" onclick="history.back(-1)"/>
+                    <input type="button" value="保存" onclick="$('#updateFrom').submit()"/>
                     <input type="button" value="返回" onclick="history.back(-1)"/>
                 </div>
             </form>

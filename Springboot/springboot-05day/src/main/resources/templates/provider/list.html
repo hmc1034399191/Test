@@ -26,8 +26,8 @@
             <div class="search">
                 <span>供应商名称：</span>
                 <input type="text"th:value="${ProviderName}" name="ProviderName" placeholder="请输入供应商的名称"/>
-                <input type="button"  onclick="$('#seeForm').submit()" value="查询"/>
-                <a href="add.html">添加供应商</a>
+                <input type="button" onclick="$('#seeForm').submit()" value="查询"/>
+                <a th:href="@{/toadd}" href="add.html">添加供应商</a>
             </div>
         </form>
         <!--供应商操作表格-->
@@ -50,21 +50,8 @@
                 <td th:text="${#dates.format(p.createDate,'yyyy-MM-DD hh:mm:ss')}">2015-11-12</td>
                 <td>
                     <a th:href="@{/provider/}+${p.pid}" href="view.html"><img src="../img/read.png" alt="查看" title="查看"/></a>
-                    <a href="update.html"><img src="../img/xiugai.png" alt="修改" title="修改"/></a>
-					<a href="#" class="delete" ><img src="../img/schu.png" alt="删除" title="删除"/></a>
-                </td>
-            </tr>
-            <tr>
-                <td>PRO-CODE—001</td>
-                <td>测试供应商001</td>
-                <td>韩露</td>
-                <td>15918230478</td>
-                <td>15918230478</td>
-                <td>2015-11-12</td>
-                <td>
-                    <a href="view.html"><img src="../img/read.png" alt="查看" title="查看"/></a>
-                    <a href="update.html"><img src="../img/xiugai.png" alt="修改" title="修改"/></a>
-					<a href="#" class="delete" ><img src="../img/schu.png" alt="删除" title="删除"/></a>
+                    <a th:href="@{/provider/}+${p.pid}+'?type=update'" href="update.html"><img src="../img/xiugai.png" alt="修改" title="修改"/></a>
+					<a th:attr="del_uri=@{/provider/}+${p.pid}" href="#" class="delete" ><img src="../img/schu.png" alt="删除" title="删除"/></a>
                 </td>
             </tr>
         </table>

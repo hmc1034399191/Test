@@ -40,7 +40,7 @@ public class LoginController {
         //注销session
         session.invalidate();
         //转发到登录页面
-        return "redirect:index.html";
+        return "redirect:/index.html";
     }
 
 
