@@ -38,7 +38,7 @@ public class ProviderDao {
 
     public Collection<Provider> getAll(String providerName){
         Collection<Provider> providers = getAll();
-        Collection<Provider>list=new ArrayList<>();
+        Collection<Provider>list=new ArrayList();
         if( !StringUtils.isEmpty( providerName )){
             for (Provider provider: providers) {
                 if ( provider.getProviderName().toUpperCase().contains(  providerName.toUpperCase() ) ) {

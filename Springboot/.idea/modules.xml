@@ -9,6 +9,8 @@
       <module fileurl="file://$PROJECT_DIR$/springboot-04day/springboot-04day.iml" filepath="$PROJECT_DIR$/springboot-04day/springboot-04day.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-05day/springboot-05day.iml" filepath="$PROJECT_DIR$/springboot-05day/springboot-05day.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-bill/springboot-bill.iml" filepath="$PROJECT_DIR$/springboot-bill/springboot-bill.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-jdbc/springboot-jdbc.iml" filepath="$PROJECT_DIR$/springboot-jdbc/springboot-jdbc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-tomcat/springboot-tomcat.iml" filepath="$PROJECT_DIR$/springboot-tomcat/springboot-tomcat.iml" />
     </modules>
   </component>
 </project>

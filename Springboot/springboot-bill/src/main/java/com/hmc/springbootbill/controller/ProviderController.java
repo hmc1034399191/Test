@@ -5,6 +5,7 @@ import com.hmc.springbootbill.entities.Provider;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
@@ -19,6 +20,9 @@ public class ProviderController {
 
     @Autowired
     ProviderDao providerDao;
+
+
+
 
     //用户登录
     @PostMapping("/login")//将参数与前台参数解耦

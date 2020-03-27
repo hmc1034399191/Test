@@ -79,6 +79,7 @@ public class ProviderController {
     @DeleteMapping("/provider/{pid}")
     public String delete(@PathVariable("pid")Integer pid){
         logger.info("删除pid为："+pid+"的供应商信息");
+        providerDao.delete(pid);
         return "redirect:/providers";
     }
 

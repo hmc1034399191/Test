@@ -12,6 +12,8 @@
         <module name="springboot-04day" />
         <module name="springboot-05day" />
         <module name="springboot-bill" />
+        <module name="springboot-jdbc" />
+        <module name="springboot-tomcat" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -21,6 +23,8 @@
       <module name="springboot-04day" target="1.8" />
       <module name="springboot-05day" target="1.8" />
       <module name="springboot-bill" target="1.8" />
+      <module name="springboot-jdbc" target="1.8" />
+      <module name="springboot-tomcat" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

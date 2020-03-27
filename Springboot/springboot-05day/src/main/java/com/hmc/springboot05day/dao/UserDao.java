@@ -40,7 +40,7 @@ public class UserDao {
 
     public Collection<User> getAll(String realName){
         Collection<User> users = getAll();
-        Collection<User>list=new ArrayList<>();
+        Collection<User>list=new ArrayList();
         //不为空
         if( !StringUtils.isEmpty( realName )) {
 
